@@ -1,1 +1,33 @@
-Hello World!!!
+GITHUB REST API -
+
+https://api.github.com/users/aghorpade/repos
+
+List all repos -
+https://api.github.com/users/aghorpade/repos
+
+Content search -
+
+https://api.github.com/repos/aghorpade/mulesoft/readme
+--search readme file in master branch
+
+
+https://api.github.com/repos/aghorpade/mulesoft/contents/payloadread/README.md
+
+search content of readme file in payloadread folder -- reponse will be base64 encoded content
+
+
+//get the content of file
+https://api.github.com/repos/aghorpade/mulesoft/contents/payloadread/src/main/java/com/payload/read/User.java
+
+
+//create new file or update a file
+PUT https://api.github.com/repos/aghorpade/GithubAPIDemo/contents/src/main/test1.txt
+{
+  "message": "my commit message",
+  "committer": {
+    "name": "Scott Chacon",
+    "email": "schacon@gmail.com"
+  },
+  "content": "bXkgbmV3IGZpbGUgY29udGVudHM=",
+  "sha": "1f58fa8cd67704ae3a8650ed0034839c142102c8"  --optional
+}
